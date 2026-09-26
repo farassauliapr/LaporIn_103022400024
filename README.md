@@ -1,4 +1,4 @@
-# LaporKampus - Platform Pengaduan Fasilitas Kampus
+# LaporIn - Platform Pengaduan Fasilitas Kampus
 
 Aplikasi web murni berbasis HTML5 untuk memudahkan mahasiswa melaporkan kerusakan fasilitas di lingkungan kampus. Proyek ini merupakan tugas Week 2 HTML mata kuliah Pemrograman Web.
 
