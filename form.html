@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaporKampus - Buat Laporan Baru</title>
+</head>
+<body>
+
+    <header>
+        <h1>LaporKampus</h1>
+        <p>Platform Pengaduan Fasilitas Kampus</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Daftar Pengaduan</a></li>
+            <li><a href="form.html">Buat Laporan Baru</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Formulir Laporan Kerusakan Fasilitas</h2>
+        <p>Silakan isi form di bawah ini dengan lengkap untuk melaporkan fasilitas kampus yang rusak.</p>
+        
+        <form action="#" method="POST">
+            <!-- Contoh input teks -->
+            <p>
+                <label for="nama_pelapor">Nama Pelapor:</label><br>
+                <input type="text" id="nama_pelapor" name="nama_pelapor" placeholder="Masukkan nama Anda">
+            </p>
+
+            <p>
+                <label for="lokasi">Lokasi Ruangan/Gedung:</label><br>
+                <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Ruang Kelas B, Gedung 4">
+            </p>
+
+            <!-- Contoh elemen select -->
+            <p>
+                <label for="urgensi">Tingkat Urgensi Kerusakan:</label><br>
+                <select id="urgensi" name="urgensi">
+                    <option value="rendah">Rendah (Tidak mengganggu kuliah)</option>
+                    <option value="sedang">Sedang (Cukup mengganggu)</option>
+                    <option value="tinggi">Tinggi (Sangat mengganggu/Bahaya)</option>
+                </select>
+            </p>
+
+            <!-- Contoh elemen textarea -->
+            <p>
+                <label for="deskripsi_kerusakan">Deskripsi Kerusakan:</label><br>
+                <textarea id="deskripsi_kerusakan" name="deskripsi_kerusakan" rows="5" cols="40" placeholder="Jelaskan secara detail bagian mana yang rusak..."></textarea>
+            </p>
+
+            <!-- Contoh input file untuk upload gambar -->
+            <p>
+                <label for="foto_bukti">Unggah Foto Bukti:</label><br>
+                <input type="file" id="foto_bukti" name="foto_bukti" accept="image/*">
+            </p>
+
+            <p>
+                <button type="submit">Kirim Laporan</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LaporKampus - Tugas Pemrograman Web Bab 2 HTML</p>
+    </footer>
+
+</body>
+</html>
