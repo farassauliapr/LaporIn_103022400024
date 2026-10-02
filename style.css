@@ -1,0 +1,257 @@
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: #111827;
+    font-weight: 600;
+}
+
+/*2. HEADER & FOOTER*/
+header {
+    background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%); 
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px; 
+}
+
+header p {
+    margin: 8px 0 0 0;
+    font-size: 1.05rem;
+    color: #fecaca;
+    font-weight: 400;
+}
+
+footer {
+    background-color: #1f2937;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/*3. MENU NAVIGASI */
+nav {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Jarak antar menu */
+}
+
+nav ul li a {
+    display: block;
+    color: #4b5563;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+/* Efek garis bawah merah muncul saat kursor diarahkan ke menu */
+nav ul li a:hover {
+    color: #b91c1c;
+    border-bottom: 3px solid #b91c1c;
+    background-color: #fef2f2;
+}
+
+/*4. KONTEN UTAMA (STYLE CARD) */
+.container {
+    background-color: white;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px; /* Sudut membulat modern */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.badge-warning { 
+    background-color: #fef3c7; 
+    color: #92400e; 
+}
+.badge-info { 
+    background-color: #fee2e2; 
+    color: #991b1b; 
+}
+
+/* 5. TABEL MODERN (MINIMALIS) */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+th:first-child { border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+th:last-child { border-top-right-radius: 8px; border-bottom-right-radius: 8px; }
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+td img {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/*6. TOMBOL & FORM (INTERAKTIF) */
+a {
+    color: #dc2626;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #991b1b;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="file"], select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: #dc2626;
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+}
+
+button[type="submit"] {
+    background-color: #dc2626;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2);
+}
+
+/* Efek tombol tertekan dan warnanya menggelap */
+button[type="submit"]:hover {
+    background-color: #b91c1c;
+    box-shadow: 0 2px 4px -1px rgba(220, 38, 38, 0.2);
+    transform: translateY(1px);
+}
+
+/* 
+   7. RESPONSIVE (TAMPILAN HP) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .container {
+        margin: 15px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    th { display: none; }
+    
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background-color: white;
+    }
+    
+    td {
+        position: relative;
+        padding: 12px 12px 12px 45%;
+        text-align: right;
+        border-bottom: 1px solid #f3f4f6;
+    }
+    
+    td:last-child {
+        border-bottom: none;
+    }
+    
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: 40%;
+        text-align: left;
+        font-weight: 600;
+        color: #6b7280;
+        font-size: 0.9rem;
+    }
+}

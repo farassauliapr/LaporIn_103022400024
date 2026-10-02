@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaporIn - Daftar Pengaduan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -20,44 +21,47 @@
     </nav>
 
     <main>
-        <h2>Daftar Laporan Fasilitas Rusak</h2>
-        <p>Berikut adalah daftar pengaduan fasilitas kampus yang telah dilaporkan oleh mahasiswa.</p>
-        
-        <table border="1" cellpadding="10" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Foto</th>
-                    <th>Ruangan/Lokasi</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        <img src="images/pengaduan ac.jpg" alt="Foto AC bocor di Ruang Kelas A Gedung F" width="100">
-                    </td>
-                    <td>Ruang Kelas A - Gedung F</td>
-                    <td>Dilaporkan</td>
-                    <td><a href="detail1.html">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        <img src="images/pengaduan proyektor.jpg" alt="Foto proyektor mati di Laboratorium Komputer 2" width="100">
-                    </td>
-                    <td>Laboratorium Komputer 2</td>
-                    <td>Dilaporkan</td>
-                    <td><a href="detail2.html">Lihat Detail</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- Membungkus konten utama dengan container -->
+        <div class="container">
+            <h2>Daftar Laporan Fasilitas Rusak</h2>
+            <p>Berikut adalah daftar pengaduan fasilitas kampus yang telah dilaporkan oleh mahasiswa.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>Ruangan/Lokasi</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No">1</td>
+                        <td data-label="Foto">
+                            <img src="images/pengaduan ac.jpg" alt="Foto AC bocor di Ruang Kelas A Gedung F" width="100">
+                        </td>
+                        <td data-label="Ruangan/Lokasi">Ruang Kelas A - Gedung F</td>
+                        <td data-label="Status"><span class="badge badge-warning">Sedang Diperbaiki</span></td>
+                        <td data-label="Aksi"><a href="detail1.html">Lihat Detail</a></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No">2</td>
+                        <td data-label="Foto">
+                            <img src="images/pengaduan proyektor.jpg" alt="Foto proyektor mati di Laboratorium Komputer 2" width="100">
+                        </td>
+                        <td data-label="Ruangan/Lokasi">Laboratorium Komputer 2</td>
+                        <td data-label="Status"><span class="badge badge-info">Dilaporkan</span></td>
+                        <td data-label="Aksi"><a href="detail2.html">Lihat Detail</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 LaporIn - Tugas Pemrograman Web Week 2</p>
+        <p>&copy; 2026 LaporIn - Tugas Pemrograman Web </p>
     </footer>
 
 </body>
