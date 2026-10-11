@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaporIn - Detail Pengaduan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LaporIn - Detail Laporan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { telkom: { 500: '#dc2626', 600: '#b91c1c', 700: '#991b1b' } } } } }</script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <header>
-        <h1>LaporIn</h1>
-        <p>Platform Pengaduan Fasilitas Kampus</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Daftar Pengaduan</a></li>
-            <li><a href="form.html">Buat Laporan Baru</a></li>
-        </ul>
+    <!-- NAVBAR (Singkat saja untuk template) -->
+    <nav class="relative bg-cover bg-center text-white shadow-lg sticky top-0 z-50" style="background-image: url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3Dhttps://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crophttps://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');">
+        <div class="absolute inset-0 bg-gradient-to-r from-telkom-700/90 to-slate-900/70"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 font-bold text-xl"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>LaporIn</a>
+            <div class="space-x-4"><a href="index.html" class="hover:underline">Kembali</a></div>
+        </div>
     </nav>
 
-    <main>
-        <div class="container">
-        <h2>Detail Laporan Kerusakan</h2>
-        
-        <article>
-            <h3>AC Bocor Parah Menetes ke Meja Belajar</h3>
-            
-            <p><strong>Dilaporkan oleh:</strong> Budi Santoso</p>
-            <p><strong>Lokasi:</strong> Ruang Kelas A - Gedung F</p>
-            <p><strong>Status saat ini:</strong> Dilaporkan</p>
-            
-            <figure>
-                <img src="images/pengaduan ac.jpg" alt="Foto AC bocor di kelas A" width="400">
-            </figure>
-            
-            <h4>Deskripsi Kronologi:</h4>
-            <p>
-                Pada hari Senin pagi saat perkuliahan Basis Data, AC di sebelah kiri depan kelas mulai meneteskan air. 
-                Semakin lama tetesan semakin deras hingga membasahi meja mahasiswa dan membuat lantai menjadi licin. 
-                Mohon segera diperbaiki karena air bisa mengenai stop kontak listrik yang ada di bawah meja.
-            </p>
+    <!-- KONTEN DETAIL -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <a href="index.html" class="inline-flex items-center text-sm font-medium text-telkom-600 hover:text-telkom-700 mb-6">
+            &larr; Kembali ke Daftar Pengaduan
+        </a>
 
-            <h4>Tindak Lanjut Teknisi:</h4>
-            <p>Laporan telah diterima. Teknisi dijadwalkan akan memeriksa pipa pembuangan AC pada hari ini pukul 15.00 WIB setelah kelas selesai.</p>
-        </article>
-        
-        <br>
-        <a href="index.html">&laquo; Kembali ke Daftar Pengaduan</a>
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <!-- Header Kartu -->
+            <div class="px-6 py-6 sm:px-8 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900">AC Bocor Parah Menetes</h1>
+                    <p class="text-sm text-slate-500 mt-1 flex gap-3">
+                        <span>Oleh: <strong>Budi Santoso</strong></span> | 
+                        <span>Lokasi: <strong>Ruang Kelas A - Gedung F</strong></span>
+                    </p>
+                </div>
+                <!-- Badge Status -->
+                <span class="px-4 py-1.5 rounded-full text-sm font-bold bg-yellow-100 text-yellow-800 border border-yellow-200 shadow-sm">
+                    Sedang Diperbaiki
+                </span>
+            </div>
+
+            <!-- Isi Detail (Bagi 2 kolom di layar laptop) -->
+            <div class="p-6 sm:p-8 flex flex-col md:flex-row gap-8">
+                <!-- Sisi Gambar -->
+                <div class="md:w-1/2">
+                    <img src="images/pengaduan ac.jpg" alt="Foto Kerusakan AC" class="w-full h-auto rounded-xl object-cover shadow-md border border-slate-100">
+                </div>
+                <!-- Sisi Teks Kronologi -->
+                <div class="md:w-1/2 space-y-6">
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Deskripsi Kronologi</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Pada hari Senin pagi saat perkuliahan Basis Data, AC di sebelah kiri depan kelas mulai meneteskan air. Semakin lama tetesan semakin deras hingga membasahi meja mahasiswa dan membuat lantai menjadi licin. Mohon segera diperbaiki karena air bisa mengenai stop kontak.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 border-l-4 border-l-telkom-500">
+                        <h3 class="text-sm font-bold text-slate-900 mb-1">Tindak Lanjut Teknisi</h3>
+                        <p class="text-slate-600 text-sm">
+                            Laporan telah diterima. Teknisi dijadwalkan akan memeriksa pipa pembuangan AC pada hari ini pukul 15.00 WIB setelah jadwal kelas selesai.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 LaporIn - Tugas Pemrograman Web </p>
-    </footer>
 
 </body>
 </html>

@@ -3,56 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaporIn - Detail Pengaduan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LaporIn - Detail Laporan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { telkom: { 500: '#dc2626', 600: '#b91c1c', 700: '#991b1b' } } } } }</script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <header>
-        <h1>LaporIn</h1>
-        <p>Platform Pengaduan Fasilitas Kampus</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Daftar Pengaduan</a></li>
-            <li><a href="form.html">Buat Laporan Baru</a></li>
-        </ul>
+    <nav class="relative bg-cover bg-center text-white shadow-lg sticky top-0 z-50" style="background-image: url
+    ('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3Dhttps://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');">
+        <div class="absolute inset-0 bg-gradient-to-r from-telkom-700/90 to-slate-900/70"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 font-bold text-xl"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>LaporIn</a>
+            <div class="space-x-4"><a href="index.html" class="hover:underline">Kembali</a></div>
+        </div>
     </nav>
 
-    <main>
-        <div class="container">
-        <h2>Detail Laporan Kerusakan</h2>
-        
-        <article>
-            <h3>Proyektor Mati Total dan Lampu Indikator Berkedip Merah</h3>
-            
-            <p><strong>Dilaporkan oleh:</strong> Siti Rahmawati</p>
-            <p><strong>Lokasi:</strong> Laboratorium Komputer 2</p>
-            <p><strong>Status saat ini:</strong> Dilaporkan</p>
-            
-            <figure>
-                <img src="images/pengaduan proyektor.jpg" alt="Foto detail proyektor mati di Laboratorium Komputer 2" width="400">
-            </figure>
-            
-            <h4>Deskripsi Kronologi:</h4>
-            <p>
-                Saat perkuliahan praktikum jam ke-3, proyektor mendadak mati sendiri dan mengeluarkan bunyi bip. 
-                Lampu indikator berkedip warna merah dan tidak bisa dinyalakan kembali menggunakan remote maupun tombol manual.
-            </p>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <a href="index.html" class="inline-flex items-center text-sm font-medium text-telkom-600 hover:text-telkom-700 mb-6">
+            &larr; Kembali ke Daftar Pengaduan
+        </a>
 
-            <h4>Tindak Lanjut Teknisi:</h4>
-            <p>Laporan telah masuk ke antrean unit IT & Fasilitas. Petugas akan mengecek kondisi kabel power esok hari.</p>
-        </article>
-        
-        <br>
-        <a href="index.html">&laquo; Kembali ke Daftar Pengaduan</a>
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-6 sm:px-8 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900">Proyektor Mati Total Berkedip Merah</h1>
+                    <p class="text-sm text-slate-500 mt-1 flex gap-3">
+                        <span>Oleh: <strong>Siti Rahmawati</strong></span> | 
+                        <span>Lokasi: <strong>Laboratorium Komputer 2</strong></span>
+                    </p>
+                </div>
+                <!-- Badge Status (Biru) -->
+                <span class="px-4 py-1.5 rounded-full text-sm font-bold bg-blue-100 text-blue-800 border border-blue-200 shadow-sm">
+                    Dilaporkan
+                </span>
+            </div>
 
+            <div class="p-6 sm:p-8 flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <img src="images/pengaduan proyektor.jpg" alt="Foto Kerusakan Proyektor" class="w-full h-auto rounded-xl object-cover shadow-md border border-slate-100">
+                </div>
+                <div class="md:w-1/2 space-y-6">
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Deskripsi Kronologi</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">
+                            Saat perkuliahan praktikum jam ke-3, proyektor mendadak mati sendiri dan mengeluarkan bunyi bip panjang. Lampu indikator berkedip warna merah berulang kali dan mesin tidak bisa dinyalakan kembali menggunakan remote maupun tombol power manual.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 border-l-4 border-l-slate-400">
+                        <h3 class="text-sm font-bold text-slate-900 mb-1">Tindak Lanjut Teknisi</h3>
+                        <p class="text-slate-600 text-sm">
+                            Laporan baru saja masuk ke antrean unit IT & Fasilitas. Petugas akan mengecek kondisi kabel power dan lampu proyektor pada esok hari.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer></div>s
-        <p>&copy; 2026 LaporIn - Tugas Pemrograman Web</p>
-    </footer>
-
 </body>
 </html>
