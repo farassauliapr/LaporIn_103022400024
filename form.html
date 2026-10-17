@@ -13,8 +13,8 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- NAVBAR (Sama dengan index.html) -->
-    <nav class="relative bg-cover bg-center text-white shadow-lg sticky top-0 z-50" style="background-image: url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');">
+    <!-- Navigasi -->
+    <nav class="relative bg-cover bg-center text-white shadow-lg sticky top-0 z-50" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1920&auto=format&fit=crop');">
         <div class="absolute inset-0 bg-gradient-to-r from-telkom-700/90 to-slate-900/70"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -45,16 +45,18 @@
         </div>
     </nav>
 
-    <!-- KONTEN FORM -->
+    <!-- Konten Form -->
     <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8">
+        <!-- Container notifikasi pesan validasi -->
+        <div id="notif-pesan" style="display: none;" class="mb-4 p-4 rounded-lg font-medium text-sm"></div>
+
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
             <div class="bg-slate-50 border-b border-slate-200 px-6 py-5">
                 <h2 class="text-xl font-bold text-slate-800">Formulir Laporan Kerusakan</h2>
                 <p class="text-sm text-slate-500 mt-1">Isi formulir ini dengan detail agar teknisi dapat segera menindaklanjuti.</p>
             </div>
             
-            <form action="#" method="POST" class="px-6 py-6 space-y-6">
-                <!-- Grid untuk Layar Desktop (2 kolom) -->
+            <form id="form-laporan" action="#" method="POST" class="px-6 py-6 space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="nama_pelapor" class="block text-sm font-medium text-slate-700 mb-1">Nama Pelapor</label>
@@ -83,7 +85,6 @@
 
                 <div>
                     <label class="block text-sm font-medium text-slate-700 mb-1">Unggah Foto Bukti</label>
-                    <!-- Tampilan Upload File Custom yang Modern -->
                     <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 border-dashed rounded-lg hover:border-telkom-500 transition-colors">
                         <div class="space-y-1 text-center">
                             <svg class="mx-auto h-12 w-12 text-slate-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -111,6 +112,9 @@
         <p class="text-sm">&copy; 2026 LaporIn</p>
     </footer>
 
+    <!-- Pemanggilan Library & Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
